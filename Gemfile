@@ -38,6 +38,7 @@ gem 'rubocop'
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 gem 'slim'
+gem "paperclip", "~> 5.0.0"
 #gem 'sass'
 
 group :development, :test do
