@@ -38,7 +38,7 @@ gem 'rubocop'
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 gem 'slim'
-gem 'sass'
+#gem 'sass'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
