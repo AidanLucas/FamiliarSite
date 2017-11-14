@@ -1,0 +1,2 @@
+class FamiliarCategory < ApplicationRecord
+end
