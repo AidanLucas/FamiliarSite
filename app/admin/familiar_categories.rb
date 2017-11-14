@@ -11,5 +11,5 @@ ActiveAdmin.register FamiliarCategory do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-
+  permit_params :familiar_id, :category_id
 end
