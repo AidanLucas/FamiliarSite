@@ -1,10 +1,14 @@
 class Familiar < ApplicationRecord
   #Assoications
+  #Many to Many through joins
   has_many :familiar_categories
   has_many :categories, through: :familiar_categories
-  has_many :reviews
   has_many :orders
   has_many :customers, through: :orders
+  
+  #Many to one
+  has_many :reviews
+  has_many :reports
 
   #Validation
   validates :name, presence: true,  uniqueness: true
