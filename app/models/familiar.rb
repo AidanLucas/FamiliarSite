@@ -2,6 +2,7 @@ class Familiar < ApplicationRecord
   #Assoications
   has_many :familiar_categories
   has_many :categories, through: :familiar_categories
+  has_many :reviews
 
   #Validation
   validates :name, presence: true,  uniqueness: true
