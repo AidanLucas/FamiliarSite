@@ -3,6 +3,8 @@ class Familiar < ApplicationRecord
   has_many :familiar_categories
   has_many :categories, through: :familiar_categories
   has_many :reviews
+  has_many :orders
+  has_many :customers, through: :orders
 
   #Validation
   validates :name, presence: true,  uniqueness: true
