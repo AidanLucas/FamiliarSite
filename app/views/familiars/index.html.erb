@@ -1,5 +1,12 @@
 <h1>Welcome to my store!</h1>
 
+<%= paginate @familiars %>
+
+<%= form_tag(familiars_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search familiars" %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
+
 <table>
   <tr>
     <th>Name</th>
