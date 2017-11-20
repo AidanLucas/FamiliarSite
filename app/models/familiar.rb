@@ -22,6 +22,6 @@ class Familiar < ApplicationRecord
 
   #Search bar
   def self.search(search)
-    where("name LIKE ?", "%#{search}%")
+    where("name LIKE ? OR description LIKE ?", "%#{search}%", "%#{search}%")
   end
 end
