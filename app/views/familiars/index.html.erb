@@ -1,0 +1,17 @@
+<h1>Welcome to my store!</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+
+  <% @familiars.each do |familiar| %>
+    <tr>
+      <td><%= familiar.name %></td>
+      <td><%= image_tag familiar.image.url, :size => "100x100" %>
+      <td><%= familiar.description %></td>
+      <td><%= link_to 'Show', familiar_path(familiar) %></td>
+    </tr>
+  <% end %>
+</table>
