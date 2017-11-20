@@ -2,7 +2,6 @@
   <strong>Name:</strong>
   <%= @familiar.name %>
 </p>
-
 <p>
   <strong>Description:</strong>
   <%= @familiar.description %>
@@ -10,6 +9,14 @@
 <p>
   <strong>Image:</strong>
   <%= image_tag @familiar.image.url%>
+</p>
+<p>
+  <strong>Price:</strong>
+  <%= @familiar.price %>
+</p>
+<p>
+  <strong>Rating Score:</strong>
+  <%= @familiar.ratings %>
 </p>
 
 <%= link_to 'Back', controller: 'familiars' %>
