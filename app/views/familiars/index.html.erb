@@ -1,5 +1,12 @@
 <h1>Welcome to my store!</h1>
 
+<nav>
+  <ul>
+    <li><%= link_to 'About Us', controller: 'about' %></li>
+    <li><%= link_to 'Contact Us', controller: 'contact' %></li>
+  </ul>
+</nav>
+
 <%= paginate @familiars %>
 
 <%= form_tag(familiars_path, :method => "get", id: "search-form") do %>
