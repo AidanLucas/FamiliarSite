@@ -1,0 +1,31 @@
+<h1>Welcome to my store!</h1>
+
+<nav>
+  <ul>
+    <li><%= link_to 'About Us', controller: 'about' %></li>
+    <li><%= link_to 'Contact Us', controller: 'contact' %></li>
+  </ul>
+</nav>
+
+<%= paginate @familiars %>
+
+<%= form_tag(familiars_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search familiars" %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+
+  <% @familiars.each do |familiar| %>
+    <tr>
+      <td><%= familiar.name %></td>
+      <td><%= image_tag familiar.image.url, :size => "100x100" %>
+      <td><%= familiar.description %></td>
+      <td><%= link_to 'Show', familiar_path(familiar) %></td>
+    </tr>
+  <% end %>
+</table>
